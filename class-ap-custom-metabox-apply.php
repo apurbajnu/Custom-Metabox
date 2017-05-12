@@ -17,7 +17,6 @@ if (!class_exists('Mi_Team_Metabox_apply')):
         }
 
 
-
         public function mi_get_settings_field()
         {
 
@@ -182,7 +181,7 @@ if (!class_exists('Mi_Team_Metabox_apply')):
         function displayfunction($v)
         {
 
-            $embed_code = wp_oembed_get($v, array('width' => 240, 'height' => 150)); ?>
+            $embed_code = wp_oembed_get($v, array('width' => 350, 'height' => 150)); ?>
 
             <?php echo $embed_code;
         }
@@ -191,104 +190,105 @@ if (!class_exists('Mi_Team_Metabox_apply')):
     }
 endif;
 
+/*================================Filter Example========================*/
 
-
-add_filter('mi_meta_apply',function($fields){
-
-
-    $fields[] = array(
-
-        'label' => 'Personal Info',
-        'name' => 'mi_tm_personal_section',
-        'type' => 'group',
-        'post_options' => array(
-            'post_type' => "demo",
-        ),
-        'inputs' => array(
-            array(
-                'label' => 'Designation',
-                'name' => 'designation',
-                'class' => 'vvv',
-                'type' => 'text',
-                'desc' => null,
-                'default' => null,
-                'description' => 'Ex: WordPress Developer',
-            ),
-
-
-            array(
-                'label' => 'Contact Form',
-                'name' => 'cf_shortcode',
-                'type' => 'text',
-                'class' => 'ddd',
-                'description' => 'Ex: [contact-form-7 id="121" title="MR X  Contact"]',
-                'dependency' => array(
-                    'name'=> 'vvv',
-                    'value' => 1,
-                )
-            ),
-
-            array(
-                'label' => 'demo',
-                'name' => 'demo',
-                'type' => 'text',
-                'class' => 'eee',
-                'description' => 'Ex: [contact-form-7 id="121" title="MR X  Contact"]',
-                'dependency' => array(
-                    'name'=> 'ddd',
-                    'value' => 2,
-                    'sub'   => 'vvv'
-                )
-
-            ),
-
-            array(
-                'label' => 'demo1',
-                'name' => 'demo1',
-                'type' => 'text',
-                'class' => 'fff',
-                'description' => 'Ex: [contact-form-7 id="121" title="MR X  Contact"]',
-                'dependency' => array(
-                    'name'=> 'eee',
-                    'value' => 2,
-                    'sub'   => 'ddd'
-                )
-
-            ),
-
-            array(
-                'name' => 'mi_skill_info',
-                'label' => 'Skill Infos',
-                'type' => 'repeater',
-                'child_inputs' => array(
-                    array(
-                        'name' => 'mi_skill_title',
-                        'type' => 'text',
-                        'label' => 'Skill Name',
-                        'default'=> 'php'
-                    ),
-
-                    array(
-                        'name' => 'mi_skill_percent',
-                        'type' => 'text',
-                        'label' => 'Percentage',
-                        'description' => 'Ex:85'
-
-                    ),
-
-                )
-            ),
-
-
-
-
-        )
-
-
-    );
-   
-    return $fields;
-});
+//add_filter('mi_meta_apply',function($fields){
+//
+//    $fields = array();
+//
+//    $fields[] = array(
+//
+//        'label' => 'Personal Info',
+//        'name' => 'mi_tm_personal_section',
+//        'type' => 'group',
+//        'post_options' => array(
+//            'post_type' => "demo",
+//        ),
+//        'inputs' => array(
+//            array(
+//                'label' => 'Designation',
+//                'name' => 'designation',
+//                'class' => 'vvv',
+//                'type' => 'text',
+//                'desc' => null,
+//                'default' => null,
+//                'description' => 'Ex: WordPress Developer',
+//            ),
+//
+//
+//            array(
+//                'label' => 'Contact Form',
+//                'name' => 'cf_shortcode',
+//                'type' => 'text',
+//                'class' => 'ddd',
+//                'description' => 'Ex: [contact-form-7 id="121" title="MR X  Contact"]',
+//                'dependency' => array(
+//                    'name'=> 'vvv',
+//                    'value' => 1,
+//                )
+//            ),
+//
+//            array(
+//                'label' => 'demo',
+//                'name' => 'demo',
+//                'type' => 'text',
+//                'class' => 'eee',
+//                'description' => 'Ex: [contact-form-7 id="121" title="MR X  Contact"]',
+//                'dependency' => array(
+//                    'name'=> 'ddd',
+//                    'value' => 2,
+//                    'sub'   => 'vvv'
+//                )
+//
+//            ),
+//
+//            array(
+//                'label' => 'demo1',
+//                'name' => 'demo1',
+//                'type' => 'text',
+//                'class' => 'fff',
+//                'description' => 'Ex: [contact-form-7 id="121" title="MR X  Contact"]',
+//                'dependency' => array(
+//                    'name'=> 'eee',
+//                    'value' => 2,
+//                    'sub'   => 'ddd'
+//                )
+//
+//            ),
+//
+//            array(
+//                'name' => 'mi_skill_info',
+//                'label' => 'Skill Infos',
+//                'type' => 'repeater',
+//                'child_inputs' => array(
+//                    array(
+//                        'name' => 'mi_skill_title',
+//                        'type' => 'text',
+//                        'label' => 'Skill Name',
+//                        'default'=> 'php'
+//                    ),
+//
+//                    array(
+//                        'name' => 'mi_skill_percent',
+//                        'type' => 'text',
+//                        'label' => 'Percentage',
+//                        'description' => 'Ex:85'
+//
+//                    ),
+//
+//                )
+//            ),
+//
+//
+//
+//
+//        )
+//
+//
+//    );
+//
+//    return $fields;
+//});
 
 
 
