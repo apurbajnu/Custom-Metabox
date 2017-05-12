@@ -1,0 +1,203 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+.img-container {
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 15px;
+    height: 100px;
+    margin: 5px;
+}
+
+.img-container img{
+    width:100%;
+    height:90px;
+}
+
+.ap_display_div {
+    margin: 15px 0;
+}
+
+.select2-container {
+    position: relative;
+    z-index: 99998 !important;;
+    float: left;
+    width: auto!important;
+    min-width:250px!important;
+    margin-bottom: 0;
+    display: table;
+    table-layout: fixed;
+}
+
+/*metabox css*/
+.ap-single .mb-box-class{
+    padding:0;
+}
+.mb-box-class {
+    width: calc(100% - 40px);
+    padding: 0px 15px 15px;
+    margin: 20px 0;
+    border-bottom: 1px solid #e2e2e2;
+}
+.mb-box-class:last-child{
+    border-bottom: none;
+}
+
+
+/*context normla*/
+#postbox-container-2 .mb-box-class>label
+{width: 30%;
+    min-width: 70px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+    vertical-align: middle;
+}
+#postbox-container-2 .description {
+    padding-left: 31%;
+    padding-top: 5px;
+}
+.ap-single label {
+    display: none !important;
+}
+.mb-box-class .radio-label{
+    margin:0 !important;
+}
+#postbox-container-2 .mb-box-class>input,#postbox-container-2 .mb-box-class>textarea ,#postbox-container-2 .color-metabox{
+    width: 65%;
+    height: 30px;
+    box-shadow: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+#postbox-container-2 .mb-box-class>input[type="radio"]{
+    width:initial;
+    height:initial;
+}
+/*context advance*/
+.radio-container {
+    display: inline-block;
+}
+#postbox-container-1 .mb-box-class>label
+{
+    min-width: 70px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    margin:10px 0;
+
+}
+#postbox-container-1 .mb-box-class>input:not([type=radio]) {
+    height: 30px;
+    box-shadow: none;
+    margin:10px 0;
+}
+
+
+
+.ap-meta-fields select {
+    -webkit-appearance: button;
+    -webkit-border-radius: 2px;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -webkit-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -webkit-user-select: none;
+    background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+    background-position: 97% center;
+    background-repeat: no-repeat;
+    border: 1px solid #AAA;
+    color: #555;
+    font-size: inherit;
+    overflow: hidden;
+    padding: 0px 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 300px;
+    font-size: 14px;
+}
+
+.ap-meta-fields>.ap-group-child:last-child .mb-box-class
+{
+    border-bottom: none;
+}
+#postbox-container-2  [data-repeater-item]{
+    padding-right: 100px;
+}
+[data-repeater-item]{
+    position: relative;
+    background: #f5f5f5;
+    padding-left: 15px;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-bottom:15px;
+}
+
+.ap-meta-fields .repeater-delete-button{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin-top: -16px;
+    background: #e91e63;
+    color: #fff;
+    border: 1px solid #c53729;
+    border-radius: 3px;
+    padding: 7px 12px;
+}
+
+.ap-meta-fields  .repeater-add-button{
+    color: #fff;
+    border: 1px solid #1da055;
+    border-radius: 3px;
+    padding: 7px 12px;
+    background: #2ecc71;
+    min-width: 75px;
+}
+.color-metabox {
+    z-index: 10000;
+    position: relative;
+}
+.parent_label {
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+/**
+select2 param css
+ */
+
+.select2-container {
+    position: relative;
+    z-index: 100001 !important;
+    float: left;
+    width: 100%!important;
+    margin-bottom: 0;
+    display: table;
+    table-layout: fixed;
+}
+
+/*metabox css*/
+.ap-single .mb-box-class{
+    padding:0;
+}
+.mb-box-class {
+    width: calc(100% - 40px);
+    padding: 0px 15px 15px;
+    margin: 20px 0;
+    border-bottom: 1px solid #e2e2e2;
+}
+.mb-box-class:last-child{
+    border-bottom: none;
+}
+
+#postbox-container-1 .mb-box-class>label {display: block;}
+#postbox-container-1 .mb-box-class>input:not([type=radio]) {width:100%;}
+
+#postbox-container-1 .mb-box-class {
+    padding: 0px 15px 0 0px;
+    width: 100%;
+    margin: 0;
+}
