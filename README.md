@@ -159,7 +159,7 @@ $fields[] = array(
 ----------------------------
 #### What is this ? 
 
-It a PHP script for WordPress plugin to generate metabox easily 
+It is a PHP script for WordPress plugin to generate metabox easily 
 
 ####  Is it a WordPress Plugin or Theme ? 
 
