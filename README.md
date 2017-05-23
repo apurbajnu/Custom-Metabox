@@ -12,7 +12,7 @@ Custom metabox  for wp.org  plugins . This Script written for developer only. It
 
 ## Documentation
 ----------------
-Documentation(http://www.apurba.me/2017/05/23/custom-metabox-documentation/)
+[Documentation](http://www.apurba.me/2017/05/23/custom-metabox-documentation/)
 
 ##Usage Example
 ---------------
@@ -176,4 +176,4 @@ This script for developers only not for end users.
 
 ###License
 ----------
-MIT license. (http://opensource.org/licenses/MIT)
+[MIT license](http://opensource.org/licenses/MIT)
