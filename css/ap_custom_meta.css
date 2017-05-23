@@ -18,6 +18,8 @@
 
 .ap_display_div {
     margin: 15px 0;
+    width: 100%;
+    overflow: hidden;
 }
 
 .select2-container {

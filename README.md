@@ -10,7 +10,9 @@ Custom metabox  for wp.org  plugins . This Script written for developer only. It
 * Nested Dependancy 
 * Developer Friendly 
 
-
+## Documentation
+----------------
+Documentation (http://www.apurba.me/2017/05/23/custom-metabox-documentation/)
 ##Usage Example
 ---------------
 Checkout the class-ap-custom-metabox-apply.php file. 
@@ -169,9 +171,7 @@ It is not a plugin nor a theme. Just a script. Specially for developing plugin f
 
 This script for developers only not for end users. 
 
-#### Where is documentation? 
-
-Documentation will be available within short time. It is developer friendly script , hope you will understand easily. If you have any question just ask me. apurba.jnu@gmail.com 
+ 
 
 ###License
 ----------

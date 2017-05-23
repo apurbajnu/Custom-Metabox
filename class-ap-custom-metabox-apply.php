@@ -14,6 +14,7 @@ if (!class_exists('AP_Custom_Metabox_apply')):
             $this->metafield = new Ap_custom_Metabox();
             $this->metafield->set_meta_fields($this->ap_get_settings_field());
             add_action('ap_display_function_url_example', array($this, 'displayfunction'));
+
         }
 
 
@@ -308,4 +309,4 @@ endif;
 
 
 
-new AP_Custom_Metabox_apply();
+//new AP_Custom_Metabox_apply();
