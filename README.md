@@ -12,7 +12,8 @@ Custom metabox  for wp.org  plugins . This Script written for developer only. It
 
 ## Documentation
 ----------------
-Documentation (http://www.apurba.me/2017/05/23/custom-metabox-documentation/)
+Documentation(http://www.apurba.me/2017/05/23/custom-metabox-documentation/)
+
 ##Usage Example
 ---------------
 Checkout the class-ap-custom-metabox-apply.php file. 
