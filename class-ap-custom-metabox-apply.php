@@ -72,6 +72,21 @@ if (!class_exists('Mi_Team_Metabox_apply')):
                         ),
 
                         array(
+                            'label' => 'text 2',
+                            'name' => 'text2_example',
+                            'type' => 'text',
+                            'class' => 'txt2exmple',
+                            'default' => null,
+                            'placeholder'=> 'abcd',
+                            'dependency' => array(
+                                'name'=> 'urlexmple',
+                                'value' => 'google.com',
+                                'sub' => 'emexmple'
+                            )
+                        ),
+
+
+                        array(
                             'label' => 'Color Example',
                             'name' => 'clr_example',
                             'type' => 'color',
@@ -174,7 +189,7 @@ if (!class_exists('Mi_Team_Metabox_apply')):
 
 
             );
-            return apply_filters('mi_meta_apply', $fields);
+            return apply_filters('ap_meta_apply', $fields);
 
         }
 
