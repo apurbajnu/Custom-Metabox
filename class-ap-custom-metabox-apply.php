@@ -2,8 +2,8 @@
 
 
 require plugin_dir_path(__FILE__) . 'class-ap-custom-metabox.php';
-if (!class_exists('Mi_Team_Metabox_apply')):
-    class Mi_Team_Metabox_apply extends Ap_custom_Metabox
+if (!class_exists('AP_Custom_Metabox_apply')):
+    class AP_Custom_Metabox_apply extends Ap_custom_Metabox
     {
 
         private $metafield;
@@ -12,12 +12,12 @@ if (!class_exists('Mi_Team_Metabox_apply')):
         {
 
             $this->metafield = new Ap_custom_Metabox();
-            $this->metafield->set_meta_fields($this->mi_get_settings_field());
+            $this->metafield->set_meta_fields($this->ap_get_settings_field());
             add_action('ap_display_function_url_example', array($this, 'displayfunction'));
         }
 
 
-        public function mi_get_settings_field()
+        public function ap_get_settings_field()
         {
 
             $fields = array(
@@ -308,4 +308,4 @@ endif;
 
 
 
-new Mi_Team_Metabox_apply();
+new AP_Custom_Metabox_apply();
