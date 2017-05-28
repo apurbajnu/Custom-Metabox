@@ -54,6 +54,7 @@ if (!class_exists('AP_Custom_Metabox_apply')):
                             'dependency' => array(
                                     'name'=> 'texmple',
                                     'value' => 'email',
+
                                 )
 
                         ),
