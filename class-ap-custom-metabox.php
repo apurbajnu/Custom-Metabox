@@ -124,7 +124,7 @@ if (!class_exists('Ap_custom_Metabox')):
                             $ap_dependancy_prop['dependency']['name'] = "." .$child['dependency']['name'];
                             $ap_dependancy_prop['dependency']['value'] = $child['dependency']['value'];
                             $ap_dependancy_prop['dependency']['target'] = "." . $child['class'];
-                            $ap_dependancy_prop['dependency']['sub'] = (array_key_exists('sub', $child['dependency']))? $child['dependency']['sub']:'';
+                            $ap_dependancy_prop['dependency']['sub'] = (array_key_exists('sub', $child['dependency']))? $child['dependency']['sub']:null;
                             $this->set_dependancy($ap_dependancy_prop['dependency']);
                         }
 
