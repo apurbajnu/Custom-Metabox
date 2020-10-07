@@ -487,6 +487,7 @@ if (!class_exists('Ap_custom_Metabox')):
                                 $input_repeat_args['description'] = $field_name['description'];
                                 $input_repeat_args['placeholder'] = $field_name['placeholder'];
                                 $input_repeat_args['id'] = $field_name['name'] . '[0]';
+                                $input_repeat_args['input_option'] = $field_name['input_option'];
                                 $input_callback = "ap_input_" . $input_repeat_args['type'];
                                 if (array_key_exists('value', $field_name)) {
                                     $input_repeat_args['value'] = $field_name['value'];
@@ -541,6 +542,7 @@ if (!class_exists('Ap_custom_Metabox')):
                                     $input_repeat_args['placeholder'] = $field_name['placeholder'];
                                     $input_repeat_args['id'] = $field_name['name'] . '[' . $repeat_inc . ']';
                                     $input_repeat_args['label'] = $field_name['label'];
+                                    $input_repeat_args['input_option'] = $field_name['input_option'];
                                     $input_callback = "ap_input_" . $input_repeat_args['type'];
                                     if (array_key_exists('value', $field_name)) {
                                         $input_repeat_args['value'] = $field_name['value'];
