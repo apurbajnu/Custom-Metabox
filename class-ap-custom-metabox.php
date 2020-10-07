@@ -296,8 +296,20 @@ if (!class_exists('Ap_custom_Metabox')):
             if (!array_key_exists('id', $arg)) {
                 $arg['id'] = $arg['name'];
             }
+
             return sprintf("<div class='mb-box-class %s'><label for='%s'>%s</label><textarea id='%s' style='margin-top: 12px; margin-bottom: 0px; height: 60px;' rows='1' cols='40' type='text' class='widefat' name='%s' placeholder='%s'>%s</textarea><p class='description'>%s</p></div>", esc_attr($arg['class']), esc_attr($arg['id']), esc_attr($arg['label']), esc_attr($arg['id']), esc_attr(
                 $arg['name']), esc_attr($arg['placeholder']), esc_html($value), esc_attr($arg['description']));
+        }        
+
+        function ap_input_wysiwyg($arg, $value, $object)
+        {
+            if (!array_key_exists('id', $arg)) {
+                $arg['id'] = $arg['name'];
+            }
+            ob_start();
+            wp_editor( htmlspecialchars_decode($value), $arg['id'], array("media_buttons" => false ,'textarea_name' => $arg['name']) );
+            $editor_contents = ob_get_clean();
+            return sprintf ("<div class='mb-box-class %s'><label for='%s'>%s</label><p></p>".$editor_contents."</div>",esc_attr($arg['class']), esc_attr($arg['id']), esc_attr($arg['label']));
         }
 
         /**
@@ -350,7 +362,7 @@ if (!class_exists('Ap_custom_Metabox')):
 
         function ap_input_select($arg, $value, $object)
         {
-
+           // print_r($arg);
             $options = $arg['input_option'];
             if (!array_key_exists('id', $arg)) {
                 $arg['id'] = $arg['name'];
@@ -487,11 +499,13 @@ if (!class_exists('Ap_custom_Metabox')):
                                 $input_repeat_args['description'] = $field_name['description'];
                                 $input_repeat_args['placeholder'] = $field_name['placeholder'];
                                 $input_repeat_args['id'] = $field_name['name'] . '[0]';
+                                $input_repeat_args['input_option'] = $field_name['input_option'];
                                 $input_callback = "ap_input_" . $input_repeat_args['type'];
                                 if (array_key_exists('value', $field_name)) {
                                     $input_repeat_args['value'] = $field_name['value'];
                                 }
-
+                               // print_r($input_repeat_args);
+                               // die();
                                 $input_repeat_args['class'] = (array_key_exists('class', $field_name)) ? $field_name['class'] : $field_name['name'];
 
                                 ?>
@@ -541,6 +555,7 @@ if (!class_exists('Ap_custom_Metabox')):
                                     $input_repeat_args['placeholder'] = $field_name['placeholder'];
                                     $input_repeat_args['id'] = $field_name['name'] . '[' . $repeat_inc . ']';
                                     $input_repeat_args['label'] = $field_name['label'];
+                                    $input_repeat_args['input_option'] = $field_name['input_option'];
                                     $input_callback = "ap_input_" . $input_repeat_args['type'];
                                     if (array_key_exists('value', $field_name)) {
                                         $input_repeat_args['value'] = $field_name['value'];
@@ -624,5 +639,3 @@ if (!class_exists('Ap_custom_Metabox')):
 
     }
 endif;
-
-
